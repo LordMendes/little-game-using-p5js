@@ -70,7 +70,7 @@ function draw() {
   }
   //MOVIMENTO TO PESINHO
   vilao.move(Bg.getSpeed(dir), vilao.setDirection(player.getPositionX()), mov);
-  //boss.move(Bg.getSpeed(dir), mov);
+  boss.move(Bg.getSpeed(dir), mov);
   
   
   if(vilao.hit(player.getPositionX(), player.getPositionY(), canvasHeight) == true || boss.hit(player.getPositionX(), player.getPositionY(), canvasHeight) == true){
