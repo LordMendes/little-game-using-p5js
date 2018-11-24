@@ -3,7 +3,6 @@ class BG{
 	constructor(canvasWidth,canvasHeight){
     this.BG1 = loadImage('/sprites/BG.png');
     this.BG2 = loadImage('/sprites/BG.png');
-    this.BG3 = loadImage('/sprites/BG.png');
     this.backBG1 = loadImage('/sprites/cityBG.gif');
     this.backBG2 = loadImage('/sprites/cityBG.gif');
   	this.canvasWidth = canvasWidth;
@@ -23,7 +22,7 @@ class BG{
     image((this.BG2), this.position2.x, this.position2.y);
   }
   
-  setCarrosel(playerPosition){
+  setCarrosel(){
   
 	  if(this.position1.x <= -this.canvasWidth+10){ //O +10 É SOMENTE UMA CORREÇÃO DO TAMANHO DO SOLO
       this.position1.x = 0;

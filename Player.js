@@ -12,6 +12,8 @@ class Player{
     this.jumpFlag = false;
     this.lifeImg = loadImage('/sprites/life.png');
     this.score = 0;
+    this.invuneravel = false;
+    this.deltaPos = 0;
     //-------------------
     this.lifeMax = 3;
     this.life = [1, 1, 1];
@@ -77,8 +79,9 @@ class Player{
   
   lifeDrop(){
   	if(this.life.length <= 0) return false;
-  	if(this.life > 0) {
+  	if(this.life.length > 0 && !(this.invuneravel)) {
       this.life.shift();
+      this.invuneravel = true;
     }
   }
   
@@ -90,6 +93,29 @@ class Player{
     }
   }
   
+  checkInvu(deltaPos){
+  	if(this.invuneravel == true){
+    	this.deltaPos += 15;
+      if(this.deltaPos >= 100){
+      	this.invuneravel = false;
+        this.deltaPos = 0;
+      }
+    } 
+  }
+  
+  lifeCheck(){
+  
+  	if(this.life.length == 0) {
+      textSize(50);
+      fill(255,0,0);
+      stroke(0);
+      strokeWeight(10);
+      textStyle(BOLD);
+      text("GAME OVER", 175, 175);
+      noLoop();
+    }
+  
+  }
 
   
 }
