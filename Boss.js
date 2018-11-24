@@ -1,7 +1,7 @@
 class Boss {
   
 	constructor(){
-    this.life = 500;
+
     this.bocaAberta = loadImage('/sprites/Boss/BocaAbertaPx.png');
     this.bocaFechada = loadImage('/sprites/Boss/BocaFechadaPx.png');
     this.caraFeia = loadImage('/sprites/Boss/caraFeiaPx.png');
@@ -9,7 +9,6 @@ class Boss {
     this.speed = 3;
     this.aceleracao = 0.5;
     this.Size = 200;
-    this.count = 0;
     this.life = [true,true,true,true,true,true,true,true,true,true];
   }
   
@@ -34,7 +33,7 @@ class Boss {
     this.aceleracao += 0.055;
     
   }
-  hit(alvoX, alvoY, canvasHeight){
+  hit(alvoX, alvoY){
   	if(alvoX <= this.position.x+this.Size) {
       textSize(50);
       fill(255,0,0);

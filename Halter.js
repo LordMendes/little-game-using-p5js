@@ -2,9 +2,6 @@ class Halter{
   
 	constructor(ground){  
     this.position = createVector(650, ground);
-    this.direcao = 1; //sem uso
-    this.puloMax = ground-70;
-    this.puloForce = 20;
     this.speed = -1; 
     this.sprite1 = loadImage('/sprites/Halter1.png');
     this.sprite2 = loadImage('/sprites/Halter2.png');
@@ -26,12 +23,12 @@ class Halter{
   }
   
   show(posBG, dir){
-    if(!(this.existFlag)){
+    
       if(this.testePos(posBG+this.position.x) && dir == 1) image(this.sprite1,this.position.x,this.position.y);
       else if (!this.testePos(posBG+this.position.x) && dir == 1) image(this.sprite2,this.position.x,this.position.y);
       else if (this.testePos(posBG+this.position.x) && dir == -1) image(this.sprite1f,this.position.x,this.position.y);
       else if (!this.testePos(posBG+this.position.x) && dir == -1) image(this.sprite2f,this.position.x,this.position.y);
-      }
+      
   }
  
   move(speed, dir, mov){

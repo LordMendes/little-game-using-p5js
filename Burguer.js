@@ -13,7 +13,6 @@ class Burguer{
     this.position = createVector(width,this.ground);
     this.itemFlag = false;
     this.attackFlag = false;
-    this.attackPosition = createVector(0,0);
     this.attackPos = 0;
     this.damageFlag = false;
     
@@ -42,7 +41,7 @@ class Burguer{
     
   }
 
-  vanishTomate(){
+  vanishBurguer(){
     this.burguer = true;
     this.itemFlag = false;
   }
