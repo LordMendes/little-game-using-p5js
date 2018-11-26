@@ -107,7 +107,7 @@ class Player{
     text(this.score,110,46);
     
     if(flag){
-    	this.score+=1000;
+    	this.score+=250
     }
   }
   /** Empilha vidas na pilha de vidas
